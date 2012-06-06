@@ -16,3 +16,9 @@
 
 # Ignore all vendor/bundle
 /vendor/bundle
+
+# Ignore secret files
+/config/facebook.yml
+/config/initializers/secret_token.rb
+/config/database.yml
+/config/mongoid.yml
