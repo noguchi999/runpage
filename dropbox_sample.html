@@ -1,0 +1,146 @@
+<div id="browse-location">
+  <a id="breadcrumbs-box" href="/home" data-fq_path="" dropzone="copy move" class="crumb">
+    <img src="/static/images/icons/icon_spacer.gif" class="sprite s_dropbox_32 ">
+  </a>
+  <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif">
+  <a href="/home/ruby_farm" class="crumb" data-fq_path="/ruby_farm" dropzone="copy move">ruby_farm</a>
+  <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif">
+  <a href="/home/ruby_farm/runpage" class="crumb" data-fq_path="/ruby_farm/runpage" dropzone="copy move">runpage</a>
+  <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif">
+  public
+</div>
+
+
+
+<div id="browse-box" class="list_view">
+    <div id="browse-header">
+        <div id="browse-global-actions-bar">
+
+            <div id="browse-location"><a id="breadcrumbs-box" href="/home" data-fq_path="" dropzone="copy move" class="crumb">     <img src="/static/images/icons/icon_spacer.gif" class="sprite s_dropbox_32 ">   </a>      <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif">         <a href="/home/ruby_farm" class="crumb" data-fq_path="/ruby_farm" dropzone="copy move">     ruby_farm</a>     <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif">       <a href="/home/ruby_farm/runpage" class="crumb" data-fq_path="/ruby_farm/runpage" dropzone="copy move">     runpage</a>     <img class="sprite s_breadcrumb breadcrumb_spacer" src="/static/images/icons/icon_spacer.gif"> public</div>
+
+            <div id="search-location">
+              <span id="web-search-results"></span>
+            </div>
+
+            <div id="browse-rightmenu">
+              <div id="exit-search-xclose">
+                <img src="/static/images/icons/icon_spacer.gif" alt="" class="sprite s_xclose xclose-sprite">
+              </div>
+
+              <div id="browse-search" class="sick-input small">
+                <img src="/static/images/icons/ajax-loading-small.gif" class="search-loading-wheel">
+                <label for="browse-search-input">Dropbox を検索</label>
+                <input type="text" id="browse-search-input" name="browse-search-input">
+              </div>
+              <div id="global-actions"><ul class="horizontal">             <li class="action">          <label for="upload_button">              <a id="upload_button" class="title_bubble" name="action" data-value="upload" title="アップロード">                <img alt="アップロード" src="/static/images/icons/icon_spacer.gif" class="sprite s_upload_16 ">              </a>          </label>                  </li>             <li class="action">          <label for="new_folder_button">              <a id="new_folder_button" class="title_bubble" name="action" data-value="new_folder" title="新規フォルダ">                <img alt="新規フォルダ" src="/static/images/icons/icon_spacer.gif" class="sprite s_folder_add ">              </a>          </label>                  </li>             <li class="action">          <label for="global_share_button">              <a id="global_share_button" class="title_bubble" name="action" data-value="global_share" title="このフォルダを共有">                <img alt="このフォルダを共有" src="/static/images/icons/icon_spacer.gif" class="sprite s_rainbow_16 ">              </a>          </label>                  </li>             <li class="action">          <label for="global_token_share_button">              <a id="global_token_share_button" class="title_bubble" name="action" data-value="global_token_share" title="リンクの取得">                <img alt="リンクの取得" src="/static/images/icons/icon_spacer.gif" class="sprite s_link ">              </a>          </label>                  </li>             <li class="action">          <label for="show_del_button">              <a id="show_del_button" class="title_bubble" name="action" data-value="show_del" title="削除済みファイルの表示">                <img alt="削除済みファイルの表示" src="/static/images/icons/icon_spacer.gif" class="sprite s_show-deleted ">              </a>          </label>                  </li>        </ul></div>
+
+              <a id="advanced-search-link" class="">高度な検索</a>
+            </div>
+        </div>
+        <form id="advanced-search-box" style="display: none; ">
+          <table id="table-container"><tbody><tr><td> 
+            <table id="left-search-col">
+                <tbody><tr>
+                    <td>
+                      <div class="sick-input small" id="anonymous_element_1">
+                        <label for="all_terms">すべてのキーワードを含む</label>
+                        <input type="text" name="all_terms" id="all_terms" tabindex="1">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <div class="sick-input small" id="anonymous_element_2">
+                        <label for="exact">完全一致</label>
+                        <input type="text" name="exact" id="exact" tabindex="2">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="include_files" id="include_files" checked="checked" tabindex="5">
+                    <label for="include_files">ファイル</label>
+                    <input type="checkbox" name="include_folders" id="include_folders" checked="checked" tabindex="6">
+                    <label for="include_folders">フォルダ</label>
+                  </td>
+                </tr>
+            </tbody></table></td>
+            <td><table id="right-search-col">
+                <tbody><tr>
+                    <td>
+                      <div class="sick-input small" id="anonymous_element_3">
+                        <label for="any_terms">いずれかのキーワードを含む</label>
+                        <input type="text" name="any_terms" id="any_terms" tabindex="3">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <div class="sick-input small" id="anonymous_element_4">
+                        <label for="excluded_terms">これらのキーワードを含まない</label>
+                        <input type="text" name="excluded_terms" id="excluded_terms" tabindex="4">
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" name="include_deleted" id="include_deleted" tabindex="7">
+                    <label for="include_deleted">削除済みのアイテム</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="submit" value="検索" name="advanced-search-submit" class="freshbutton-blue" id="advanced-search-submit">
+                    <img src="/static/images/icons/ajax-loading-small.gif" class="search-loading-wheel">
+                  </td>
+                </tr>
+            </tbody></table>
+          </td></tr></tbody></table>
+        </form>
+        <div id="browse-root-actions" style=""><span class="filesize">              </span>     <span class="description">              </span>     <ul class="action-bar note">                      <li>                 利用可能なアクションがありません             </li>                                </ul></div>
+        <div id="browse-sort" class="clearfix">
+          <a id="name-sorter" class="sortable-column-header bolded" data-sort="FILES_BY_NAME" data-ascending="false" style="cursor: pointer; ">
+            <span style="cursor: pointer; ">名前</span><img src="/static/images/icons/icon_spacer.gif" style="line-height: 100%; cursor: pointer; " border="0" alt="" class="sprite s_sort-uptick-off">
+          </a>
+          <a id="kind-sorter" class="sortable-column-header noarrow" data-sort="FILES_BY_KIND" data-ascending="false" style="cursor: pointer; ">
+            <span id="kind-sorter-label" style="cursor: pointer; ">種類</span><img src="/static/images/icons/icon_spacer.gif" style="line-height: 100%; cursor: pointer; " border="0" alt="" class="sprite s_downtick-spacer">
+          </a>
+          <a id="location-sorter" class="sortable-column-header" data-sort="FILES_BY_LOCATION" data-ascending="false" style="cursor: pointer; ">
+            <span style="cursor: pointer; ">場所</span><img src="/static/images/icons/icon_spacer.gif" style="line-height: 100%; cursor: pointer; " border="0" alt="" class="sprite s_downtick-spacer">
+          </a>
+          <a id="modified-sorter" class="sortable-column-header" data-sort="FILES_BY_MODIFIED" data-ascending="false" style="cursor: pointer; ">
+            <span style="cursor: pointer; ">最終更新日時</span><img src="/static/images/icons/icon_spacer.gif" style="line-height: 100%; cursor: pointer; " border="0" alt="" class="sprite s_downtick-spacer">
+          </a>
+        </div>
+
+    </div>
+
+    <img src="/static/images/icons/icon_spacer.gif" style="display:none;position:absolute;" id="highlight-arrow" alt="" class="sprite s_arrow_highlight ">
+
+    <ol id="browse-files" style="cursor: default; " class="mouse-active"><li class="browse-file  " data-identity="3100774_151635834" id="f_3100774_151635834" dropzone="copy move">      <div class="filename-col">                  <img class="sprite s_folder_32 icon" alt="images" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="/home/ruby_farm/runpage/public/images" class="filename-link" draggable="true" hidefocus="hideFocus" target="_self">images</a>         </div>     </div>             <div class="kind">                    <span class="category">フォルダ</span>           <span class="extension secondary"></span>                </div>          <div class="modified">       <span>                  <span class="modified-time">--</span>                </span>              <a href="#" class="shmodel-file title_bubble" data-title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635946" id="f_3100774_151635946">      <div class="filename-col">                  <img class="sprite s_page_white_code_32 icon" alt="404.html" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/404.html?w=b5250400" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">404.html</a>         </div>     </div>             <div class="kind">                    <span class="category">コード</span>           <span class="extension secondary">html</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635945" id="f_3100774_151635945">      <div class="filename-col">                  <img class="sprite s_page_white_code_32 icon" alt="422.html" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/422.html?w=308d4ecb" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">422.html</a>         </div>     </div>             <div class="kind">                    <span class="category">コード</span>           <span class="extension secondary">html</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" data-title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635944" id="f_3100774_151635944">      <div class="filename-col">                  <img class="sprite s_page_white_code_32 icon" alt="500.html" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/500.html?w=2ea34b06" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">500.html</a>         </div>     </div>             <div class="kind">                    <span class="category">コード</span>           <span class="extension secondary">html</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" data-title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635845" id="f_3100774_151635845">      <div class="filename-col">                  <img class="sprite s_page_white_32 icon" alt="favicon.ico" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/favicon.ico?w=ce7caff8" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">favicon.ico</a>         </div>     </div>             <div class="kind">                    <span class="category">画像</span>           <span class="extension secondary">ico</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635966" id="f_3100774_151635966">      <div class="filename-col">                  <img class="sprite s_page_white_code_32 icon" alt="index.html" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/index.html?w=9d7caf31" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">index.html</a>         </div>     </div>             <div class="kind">                    <span class="category">コード</span>           <span class="extension secondary">html</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li><li class="browse-file  " data-identity="3100774_151635917" id="f_3100774_151635917">      <div class="filename-col">                  <img class="sprite s_page_white_text_32 icon" alt="robots.txt" draggable="true" src="/static/images/icons/icon_spacer.gif">         <div class="filename ">           <a href="https://dl-web.dropbox.com/get/ruby_farm/runpage/public/robots.txt?w=03e7e429" class="filename-link" draggable="true" hidefocus="hideFocus" target="_blank">robots.txt</a>         </div>     </div>             <div class="kind">                    <span class="category">ドキュメント</span>           <span class="extension secondary">txt</span>                </div>          <div class="modified">       <span>                  <span class="modified-time">昨日 14:45</span>                </span>              <a href="#" class="shmodel-file title_bubble" title="リンクの取得">         <img src="/static/images/icons/icon_spacer.gif" class="sprite s_link18 ">       </a>            </div>     <br class="clear">   </li></ol>
+    <div id="browse-empty" style="display: none; ">
+        <img src="/static/images/add_files_300.jpg" alt="">
+        <h3>このフォルダは空です。</h3>
+        <p><a href="/install" target="_blank">デスクトップアプリケーション</a>または上の [アップロード] ボタンを使用してファイルを追加</p>
+    </div>
+    <div id="search-empty" style="display:none;">
+        <img src="/static/images/lochness_graphic.jpg" alt="">
+        <h3>結果は見つかりませんでした</h3>
+        <p>検索内容を変更して再試行してください。</p>
+    </div>
+    <div id="browse-selection" style="display:none; position: absolute;"></div>
+    <div class="copy-move-overlay" style="display: none; position: absolute;"></div>
+    <div id="copy-text" class="copy-move-text" style="display: none; position: absolute;"><a>コピー</a></div>
+    <div class="copy-move-overlay" style="display: none; position: absolute;"></div>
+    <div class="copy-move-text" style="display: none; position: absolute;"><a>移動</a></div>
+    <textarea id="hold_clipboard" style="display: none;" rows="1" cols="1"></textarea>
+
+    <div id="modal-progress-overlay" style="display: none; "></div>
+
+    <div id="modal-progress-content" style="display: none; ">
+        <div id="modal-progress-container">
+            <div id="modal-progress-bar"></div>
+            <div id="modal-progress-text"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+= form_for @scenario do |f|
+  -if @scenario.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@scenario.errors.count, "error")} prohibited this scenario from being saved:"
+      %ul
+        - @scenario.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+    .clearfix
+      = f.label :name
+  
+    
+      .input
+        = f.text_field :name
+    
+  
+    .clearfix
+      = f.label :user_id
+  
+      .input
+        = f.number_field :user_id
+  
+    .clearfix
+      = f.label :create_at
+  
+      .input
+        = f.datetime_select :create_at
+  
+    .clearfix
+      = f.label :execute_at
+  
+      .input
+        = f.datetime_select :execute_at
+  
+    .actions
+      = f.submit 'Save', :class=>"btn primary"
+      %button.btn{:type=>"reset"}="Clear"

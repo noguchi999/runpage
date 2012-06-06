@@ -1,0 +1,26 @@
+.container
+  .content
+    .page-header
+      %h1 User Profile
+
+    .modal{:style=>"position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"}
+      .modal-header
+        %h3 User Profile
+        %a.close{:href=>"#{users_path}"} X
+
+      .modal-body
+        %p#notice
+          %b= notice
+      
+        %p
+          %b Fb:
+          = @user.fb_id
+        %p
+          %b Fb name:
+          = @user.fb_name
+
+      .modal-footer
+        %a.btn.primary{:href=>"#{edit_user_path(@user)}"} Edit
+        %a.btn.secondary{:href=>"#{users_path}"} Back
+        
+  = render 'footer'

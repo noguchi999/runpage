@@ -1,0 +1,25 @@
+= render 'header'
+
+.container
+  .content
+    %header.jumbotron
+      .hero-unit
+        %h1 This Is Super Awesome!
+        %p (」・ω・)」 Are you tired of your routine? Now, you can hack your f**k'n writing test cases (/・ω・)/
+      
+      .center
+        = link_to 'Connect with Facebook', Koala::Facebook::OAuth.new.url_for_oauth_code(:callback => redirect_oauths_url), class: 'btn btn-primary btn-large'
+        
+        .bs-links
+          %ul.quick-links
+            %li
+              %iframe.github-btn{src: 'http://markdotto.github.com/github-buttons/github-btn.html?user=noguchi999&repo=shotcrawl&type=watch&count=true', allowtransparency: 'true', frameborder: '0', scrolling: '0', width: '112px', height: '20px'}
+            %li
+              %iframe.github-btn{src: 'http://markdotto.github.com/github-buttons/github-btn.html?user=noguchi999&repo=shotcrawl&type=fork&count=true', allowtransparency: 'true', frameborder: '0', scrolling: '0', width: '112px', height: '20px'}
+            %li.tweet-btn
+              =link_to 'Tweet', 'https://twitter.com/share', class: 'twitter-share-button', :'data-url' => 'http://twitter.github.com/shotcrawl/', :'data-count' => 'horizontal', :'data-via' => 'o_noguchi', :'ata-related' => 'mdo:Creator of Shotcrawl'
+            
+  = render 'footer'
+
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");

@@ -1,0 +1,17 @@
+= render 'header'
+
+.container
+  .content
+    .page-header
+      = form_tag({action: 'analyze'}, class: 'form-horizontal') do
+        %fieldset
+          .control-group
+            .controls
+              .input-append
+                = text_field_tag 'url', nil, placeholder: 'put a url  ', class: 'span7'
+                = select_tag 'driver', options_from_collection_for_select(@drivers, 'to_sym', 'to_sym'), class: 'span2'
+                = submit_tag 'Go!', class:'btn btn-primary'
+  
+    = render 'analyze' unless @scenarios.blank?
+  
+  = render 'footer'

@@ -1,0 +1,25 @@
+.container
+  .content
+    .page-header
+      %h1 <%= singular_table_name.camelize %> Profile
+
+    .modal{:style=>"position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"}
+      .modal-header
+        %h3 <%= singular_table_name.camelize %> Profile
+        %a.close{:href=>"#{<%= index_helper %>_path}"} X
+
+      .modal-body
+        %p#notice
+          %b= notice
+      
+<% for attribute in attributes -%>
+        %p
+          %b <%= attribute.human_name %>:
+          = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>
+
+      .modal-footer
+        %a.btn.primary{:href=>"#{edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)}"} Edit
+        %a.btn.secondary{:href=>"#{<%= index_helper %>_path}"} Back
+        
+  = render 'footer'

@@ -1,0 +1,1 @@
+require Rails.root.join("lib/shotcrawl/shotcrawl").to_s

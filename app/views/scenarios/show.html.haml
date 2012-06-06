@@ -1,0 +1,32 @@
+.container
+  .content
+    .page-header
+      %h1 Scenario Profile
+
+    .modal{:style=>"position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"}
+      .modal-header
+        %h3 Scenario Profile
+        %a.close{:href=>"#{scenarios_path}"} X
+
+      .modal-body
+        %p#notice
+          %b= notice
+      
+        %p
+          %b Name:
+          = @scenario.name
+        %p
+          %b User:
+          = @scenario.user_id
+        %p
+          %b Create at:
+          = @scenario.create_at
+        %p
+          %b Execute at:
+          = @scenario.execute_at
+
+      .modal-footer
+        %a.btn.primary{:href=>"#{edit_scenario_path(@scenario)}"} Edit
+        %a.btn.secondary{:href=>"#{scenarios_path}"} Back
+        
+  = render 'footer'

@@ -1,0 +1,22 @@
+= form_tag({action: 'run'}, class: 'form-horizontal') do
+  %fieldset
+    %table{cellpadding: '0', cellspacing: '0', class: 'lines'}
+      = hidden_field_tag 'scenario_id', @scenarios.first.id
+      = text_area_tag 'em1', @scenarios.first.testcases.first.value
+      .pagination-right
+        %fieldset
+          .control-group
+            .controls
+              .input-append
+                - if @scenarios.first.execute_at
+                  = "Last run at: #{@scenarios.first.execute_at.strftime('%Y-%m-%d %H:%M:%S')}"
+                = select_tag 'driver', options_from_collection_for_select(@drivers, 'to_sym', 'to_sym'), class: 'span2'
+                = submit_tag 'Run', class: 'btn btn-primary'
+    
+:javascript
+  tinyMCE.init({
+    mode : "textareas",
+    theme : "simple",
+    width : "1170",
+    height : "480"
+  });

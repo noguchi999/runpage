@@ -1,0 +1,39 @@
+= form_for @<%= singular_table_name %> do |f|
+  -if @<%= singular_table_name %>.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@<%= singular_table_name %>.errors.count, "error")} prohibited this <%= singular_table_name %> from being saved:"
+      %ul
+        - @<%= singular_table_name %>.errors.full_messages.each do |msg|
+          %li= msg
+
+  %fieldset
+<% for attribute in attributes -%>
+    .clearfix
+      = f.label :<%= attribute.name %>
+  <% if attribute.field_type.to_s == "text_field" %>
+    <% if attribute.name.include? "password" %>
+      .input
+        = f.password_field :<%= attribute.name %>
+    <% else %>
+      .input
+        = f.<%= attribute.field_type %> :<%= attribute.name %>
+    <% end %>
+  <% elsif attribute.field_type.to_s == "text_area" %>
+      .input
+        = f.<%= attribute.field_type %> :<%= attribute.name %>, :class=>"xxlarge"
+        %span.help-block Write any help message.
+          
+  <% elsif attribute.field_type.to_s == "check_box" %>
+      .input
+        .input-append
+          = f.text_field :<%= attribute.name %>, :disabled=>"", :class=>"mini disabled", :size=>"16"
+          %label.add-on.active
+            = f.<%= attribute.field_type %> :<%= attribute.name %> 
+  <% else %>
+      .input
+        = f.<%= attribute.field_type %> :<%= attribute.name %>
+  <% end %>
+<% end -%>
+    .actions
+      = f.submit 'Save', :class=>"btn primary"
+      %button.btn{:type=>"reset"}="Clear"

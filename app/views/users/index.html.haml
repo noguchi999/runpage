@@ -1,0 +1,33 @@
+= render 'header'
+
+.container
+  .content
+    .page-header
+      
+    %table#tablesorter.zebra-striped
+      %thead
+        %tr
+          %th Fb
+          %th Fb name
+          %th
+          %th
+          %th
+          
+      %tbody
+        - @users.each do |user|
+          %tr
+            %td= user.fb_id
+            %td= user.fb_name
+            %td= link_to 'Show', user
+            %td= link_to 'Edit', edit_user_path(user)
+            %td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+
+    %br
+
+    = link_to 'New User', new_user_path
+    
+  = render 'footer'
+  
+:coffeescript
+  $ ->
+    $("table#tablesorter").tablesorter({ sortList: [[0,0]] })

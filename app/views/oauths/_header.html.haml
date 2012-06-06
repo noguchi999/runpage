@@ -1,0 +1,14 @@
+.navbar
+  .navbar-inner
+    .container
+      %a.btn.btn-navbar{"data-toggle" => 'collapse', "data-target" => '.nav-collapse'}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+    
+      = link_to 'Runpage', '#', class:'brand'
+      .nav-collapse
+        %ul.nav
+          %li.active= link_to 'Home', '#'
+          %li= link_to 'About', '#'
+          %li= link_to 'Contact', '#'
